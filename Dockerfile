@@ -37,13 +37,13 @@ RUN docker-php-ext-install -j$(nproc) \
 
 RUN a2enmod rewrite
 
-ADD http://releases.taotesting.com/TAO_3.1.0-RC7_build.zip /tmp/TAO_3.1.0-RC7_build.zip
+ADD http://releases.taotesting.com/TAO_3.2.0-RC2_build.zip /tmp/TAO_3.2.0-RC2_build.zip
 ADD https://github.com/mathjax/MathJax/archive/2.7.0.zip /tmp/2.7.0.zip
 
 WORKDIR /tmp
 
-RUN unzip -q TAO_3.1.0-RC7_build.zip; \
-    mv TAO_3.1.0-RC7_build web; \
+RUN unzip -q TAO_3.2.0-RC2_build.zip; \
+    mv TAO_3.2.0-RC2_build web; \
     mv web /home/; \
     unzip -q 2.7.0.zip; \
     mv MathJax-2.7.0/* /home/web/taoQtiItem/views/js/mathjax/; \
